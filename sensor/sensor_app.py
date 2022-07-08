@@ -12,6 +12,8 @@ print("Sensor Data App")
 data = load_sensor_data()
 print("Loaded records: {}".format(len(data)))
 # Module 2 code here:
+house_info = HouseInfo(data)
+test_area = 1
 
 # Module 3 code here:
 
