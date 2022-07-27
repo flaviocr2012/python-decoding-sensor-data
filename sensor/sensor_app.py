@@ -1,7 +1,8 @@
 # Runner script for all modules
 from load_data import load_sensor_data
 from house_info import HouseInfo
-from datetime import date, datetime
+from datetime import datetime
+from temperature_info import TemperatureData
 ##############################
 # Do not remove these two lines
 # They are needed to validate your unittest
@@ -25,7 +26,10 @@ print("House sensor records for date {} = {}".format(test_date.strftime("%m/%d/%
 
 
 # Module 3 code here:
-
+temperature_Data = TemperatureData(data)
+recs = temperature_Data.get_data_by_area(rec_area=test_area)
+print("\nHouse Temperature sensor records for area {} = {}".format(test_area, len(recs)))
+print("\tMaximum: {0}, Minimum: {1} temperatures".format(max(recs), min(recs)))
 # Module 4 code here:
 
 # Module 5 code here:
